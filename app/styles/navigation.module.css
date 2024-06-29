@@ -1,0 +1,14 @@
+.nav {
+  background: red;
+  padding: 20px 10px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  padding-left: 10px;
+}
+
+/*nav 
+li
+ul  module에선 안된다 반드시 클래스명으로 시작해야한다. */
