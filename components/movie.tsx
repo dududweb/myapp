@@ -20,7 +20,9 @@ export default function Movie({ title, id, poster_path }: IMovieProps) {
     <div className={styles.movie}>
       <img src={poster_path} alt={title} onClick={onClick} />{" "}
       {/* 온클릭은 클라이언트 이벤트 여기는 서버였다. 그래서 useclient를 써주면된다 이걸 쓴다고 나쁜게아님 */}
-      <Link href={`movies/${id}`}>{title}</Link>
+      <Link prefetch href={`movies/${id}`}>
+        {title}
+      </Link>
     </div>
   );
 }
