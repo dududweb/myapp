@@ -14,7 +14,7 @@ async function getMovieSimilar(id: string) {
   const response = await fetch(`${API_URL}/${id}/similar`);
   return response.json();
 }
-
+//api call 두번 해도 상관없다. 캐싱이 일어나기때문에.
 export async function generateMetadata({ params: { id } }: IParams) {
   const movie = await getMovie(id);
   return {
@@ -31,9 +31,9 @@ export default async function MovieDetailPage({ params: { id } }: IParams) {
       <Suspense fallback={<h3>Loading movie info</h3>}>
         <MovieInfo id={id} />
       </Suspense>
-      {/* <Suspense fallback={<h3>Loading movie videos</h3>}>
+      <Suspense fallback={<h3>Loading movie videos</h3>}>
         <MovieVideos id={id} />
-      </Suspense> */}
+      </Suspense>
       <Suspense>
         <MovieSimilarSlick similarMovies={similarMovies} />
       </Suspense>

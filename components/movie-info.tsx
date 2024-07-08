@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+import { API_URL } from "../app/constans";
 import potato from "../app/styles/moive.info.module.css";
 
 export async function getMovie(id: string) {
