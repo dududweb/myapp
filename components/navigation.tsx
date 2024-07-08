@@ -21,15 +21,11 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/">Jooyoung</Link>
-          {path === "/" ? "true" : "false"}
+          <Link href="/">HW</Link>
+          {/* {path === "/" ? "true" : "false"} */}
         </li>
         <li>
-          <Link href="info">info</Link>
-          {path === "/info" ? "true" : "false"}
-        </li>
-        <li>
-          <button onClick={() => setCount((c) => c + 1)}>{count}</button>
+          <Link href="/myinfo">info</Link>
         </li>
       </ul>
     </nav>
